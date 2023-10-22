@@ -58,6 +58,7 @@
     height: 784px;
     width: 100%;
     overflow-y: hidden;
+    overflow-x: hidden;
   }
   
   .hero .overlap-group {
