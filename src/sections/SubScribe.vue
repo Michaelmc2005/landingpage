@@ -330,4 +330,16 @@ transition: transform 0.7s ease;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media (max-width: 1600px) {
+  .email-input{
+    position: absolute;
+    top: 648px;
+    left: 24%;
+    height: 40px;
+    width: 478px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+  }
+}
 </style>

@@ -394,5 +394,27 @@
     top: 0;
     width: 522px;
   }
+  @media (max-width: 1600px) {
+    .middle-section {
+      height: 1536px;
+      width: 100%;
+      margin-left: 0%;
+      overflow-y: hidden;
+      }
+      .middle-section .overlap-group {
+      height: 1204px;
+      left: 548px;
+      position: absolute;
+      top: 61px;
+      width: 729px;
+      }
+    .middle-section .overlap-2 {
+      height: 330px;
+      left: 91px;
+      position: absolute;
+      top: 166px;
+      width: 526px;
+    }
+}
   </style>
   
