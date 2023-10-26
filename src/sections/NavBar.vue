@@ -1,5 +1,4 @@
 <template>
-    
     <div class="navbar">
       <img class="rectangle" alt="Rectangle" src="https://c.animaapp.com/C0OzaKms/img/rectangle-3-1@2x.png" />
       <div class="group">
@@ -20,10 +19,11 @@
           <div class="rectangle-5" />
           <div class="text-wrapper-4">Sign in</div>
         </div>
-      </div>
     </div>
-  </template>
-  
+  </div>
+</template>
+
+
   <script>
 import { signInWithGoogle } from "@/firebase";  // Update the import path as needed
 
