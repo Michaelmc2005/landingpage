@@ -1,4 +1,6 @@
+
 <template>
+  <title>Socratique</title>
   <div class="homePage">
     <NavBar class="nav"/>
     <Hero />

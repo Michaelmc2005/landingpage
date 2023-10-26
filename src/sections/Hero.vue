@@ -57,7 +57,7 @@
   .hero {
     height: 784px;
     width: 100%;
-    overflow-y: hidden;
+    overflow: hidden;
     overflow-x: hidden;
   }
   

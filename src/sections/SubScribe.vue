@@ -82,10 +82,25 @@ export default {
 
 <style scoped>
 .hero {
-  height: 784px;
-  width: 100%;
+  position: relative;
   overflow-x: hidden;
-  
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4E3498;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.hero img {
+  position: relative;
+  z-index: 2;
 }
 .thank-you-message {
   position: absolute;

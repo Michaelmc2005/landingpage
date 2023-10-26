@@ -1,4 +1,5 @@
 <template>
+    
     <div class="navbar">
       <img class="rectangle" alt="Rectangle" src="https://c.animaapp.com/C0OzaKms/img/rectangle-3-1@2x.png" />
       <div class="group">
@@ -45,7 +46,7 @@ export default {
         if (user) {
           // You can redirect the user here
           console.log("User signed in: ", user);
-          window.location.href = 'https://socratique.io/';
+          window.location.href = 'https://socraticdialogue.vercel.app/';
 
         }
       } catch (error) {
@@ -164,6 +165,8 @@ export default {
     position: absolute;
     top: 39px;
     width: 171px;
+
+    
   }
   
   .navbar .rectangle-3 {
@@ -175,6 +178,8 @@ export default {
     position: absolute;
     top: 39px;
     width: 168px;
+    cursor: pointer;
+
   }
   
   .navbar .text-wrapper-3 {
@@ -182,7 +187,7 @@ export default {
     font-family: "Montserrat", Helvetica;
     font-size: 20px;
     font-weight: 600;
-    height: 110px;
+    height: 25px;
     left: 4px;
     letter-spacing: 0;
     line-height: normal;
@@ -190,6 +195,8 @@ export default {
     text-align: center;
     top: 46px;
     width: 163px;
+    cursor: pointer;
+
   }
   
   .navbar .overlap-group {
@@ -209,6 +216,8 @@ export default {
     position: absolute;
     top: 39px;
     width: 118px;
+    cursor: pointer;
+
   }
   
   .navbar .rectangle-5 {
@@ -220,6 +229,9 @@ export default {
     position: absolute;
     top: 39px;
     width: 115px;
+    cursor: pointer;
+
+
   }
   
   .navbar .text-wrapper-4 {
@@ -235,6 +247,8 @@ export default {
     text-align: center;
     top: 46px;
     width: 71px;
+    cursor: pointer;
+
   }
   </style>
   
