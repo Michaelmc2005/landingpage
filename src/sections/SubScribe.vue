@@ -82,25 +82,9 @@ export default {
 
 <style scoped>
 .hero {
-  position: relative;
-  overflow-x: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
+  height: 784px;
   width: 100%;
-  height: 100%;
-  background-color: #4E3498;
-  opacity: 0.6;
-  z-index: 1;
-}
-
-.hero img {
-  position: relative;
-  z-index: 2;
+  
 }
 .thank-you-message {
   position: absolute;
@@ -345,95 +329,5 @@ transition: transform 0.7s ease;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-@media (max-width: 1600px) {
-  .email-input{
-    position: absolute;
-    top: 648px;
-    left: 24%;
-    height: 40px;
-    width: 478px;
-    border-radius: 5px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-  }
-}
-@media (max-width: 1280px) {
-  .email-input{
-    position: absolute;
-    top: 648px;
-    left: 25%;
-    height: 40px;
-    width: 478px;
-    border-radius: 5px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-  }
-  .hero .start-learning-back{
-    background-color: #1d3557;
-    border: 1px solid;
-    border-color: #000000;
-    border-radius: 18px;
-    height: 63px;
-    left: 66%;
-    position: absolute;
-    top: 642px;
-    width: 175px;
-    transition: transform 0.3s ease;
-  }
-  .hero .div{
-    color: #ffffff;
-  font-family: "Montserrat", Helvetica;
-  font-size: 30px;
-  font-weight: 600;
-  height: 95px;
-  left: 27%;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 510px;
-  width: 590px;
-  text-align: center;
-  }
-  .hero .text-wrapper-5{
-    color: #ffffff;
-    font-family: "Montserrat", Helvetica;
-    font-size: 120px;
-    font-weight: 900;
-    height: 324px;
-    left: 26.5%;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 260px;
-    width: 559px;
-    transform-origin: center;
-    transform: scale(0.85);
-  }
-  .hero .rectangle{
-    background-color: #775fff;
-    border: 2px solid;
-    border-color: #000000;
-    border-radius: 13px;
-    height: 119px;
-    left: 28%;
-    position: absolute;
-    top: 280px;
-    width: 555px;
-  }
-  .hero .text-wrapper{
-    color: #ffffff;
-    font-family: "Montserrat", Helvetica;
-    font-size: 57px;
-    font-weight: 900;
-    height: 102px;
-    left: 16%;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 198px;
-    width: 100%;
-    transform-origin: center;
-  }
 }
 </style>

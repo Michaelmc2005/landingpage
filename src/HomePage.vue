@@ -15,14 +15,19 @@ import Hero from "./sections/Hero.vue";
 import MiddleSection from "./sections/MiddleSection.vue";
 import SubScribe from "./sections/SubScribe.vue";
 
+
 export default {
   name: "HomePage",
   components: {
     NavBar,
     Hero,
     MiddleSection,
-    SubScribe
+    SubScribe,
   },
+  mounted() {
+    document.title = "Socratique";
+  }
+  
 };
 </script>
 
