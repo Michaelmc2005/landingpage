@@ -6,12 +6,27 @@
         <div class="rectangle-6" />
         <div class="rectangle-7" />
         <img class="rectangle-8" alt="Rectangle" src="https://c.animaapp.com/yV9C6fSs/img/rectangle-3@2x.png" />
-        <div class=hamburger>
+        <div class=hamburger @click="openSidebar">
             <div class="rectangle-9" />
             <div class="rectangle-10" />
             <div class="rectangle-11" />
         </div>
-        
+        <div class="sidebar" :class="{ open: isSidebarOpen }">
+        <div class="sidebar-header">
+          <div class="close-icon" @click="closeSidebar">
+            <div class="rectangle-9-open" />
+            <div class="rectangle-10-open" />
+            <div class="rectangle-11-open" />
+          </div>
+        </div>
+        <div class="sidebar-content">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" @click="handleMenuClicked('our-mission')">Our Mission</a></li>
+            <li><a href="#" @click="handleMenuClicked('premium')">Pricing</a></li>
+          </ul>
+        </div>
+      </div>
         <div class="rectangle-12" />
         <div class="text-wrapper-12">Smarter</div>
         <img class="ellipse" alt="Ellipse" src="https://c.animaapp.com/yV9C6fSs/img/ellipse-2.png" />
@@ -61,6 +76,24 @@
       NotHarder,
       SubScribe,
     },
+    data() {
+    return {
+      isMobile: false,
+      isSidebarOpen: false,
+    };
+    },
+    methods: {
+        openSidebar() {
+        this.isSidebarOpen = true;
+        },
+        closeSidebar() {
+        this.isSidebarOpen = false;
+        },
+        handleMenuClicked(menuItem) {
+        this.closeSidebar();
+        this.$emit("menu-clicked", menuItem);
+        },
+    }
   };
   </script>
   
@@ -112,7 +145,9 @@
     top: 2831px;
     width: 340px;
   }
-  
+  .close-icon{
+    margin-right: 14%;
+  }
   .mobile-home-screen .rectangle-2 {
     background-color: #27097d;
     border-radius: 148px;
@@ -133,7 +168,68 @@
     top: 2301px;
     width: 191px;
   }
-  
+  .sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 150px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s ease-in-out;
+  z-index: 4;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar-header {
+  height: 60px;
+  background-color: #4e3498;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.close-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.close-icon i {
+  color: #fff;
+  font-size: 20px;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.sidebar-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-content li {
+  margin-bottom: 10px;
+}
+
+.sidebar-content a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sidebar-content a:hover {
+  color: #4e3498;
+}
   .mobile-home-screen .rectangle-4 {
     background-color: #1fde77;
     filter: blur(150px);
@@ -231,6 +327,33 @@
   
   .mobile-home-screen .rectangle-11 {
     background-color: #4a3d3d;
+    border-radius: 1px;
+    height: 2px;
+    position: absolute;
+    top: 36px;
+    width: 33px;
+  }
+
+  .mobile-home-screen .rectangle-9-open {
+    background-color: #eeeeee;
+    border-radius: 1px;
+    height: 2px;
+    position: absolute;
+    top: 26px;
+    width: 33px;
+  }
+  
+  .mobile-home-screen .rectangle-10-open {
+    background-color: #ffffff;
+    border-radius: 1px;
+    height: 2px;
+    position: absolute;
+    top: 31px;
+    width: 33px;
+  }
+  
+  .mobile-home-screen .rectangle-11-open {
+    background-color: #ffffff;
     border-radius: 1px;
     height: 2px;
     position: absolute;
