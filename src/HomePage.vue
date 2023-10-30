@@ -1,11 +1,14 @@
 
 <template>
   <title>Socratique</title>
-  <div class="homePage">
-    <NavBar class="nav"/>
-    <Hero />
-    <MiddleSection class="middle" />
+  <div class="homePage" v-show="homePage">
+    <NavBar class="nav" @menu-hovered="handleMenuHovered"/>
+    <Hero  v-show="showHero"/>
+    <OurMission v-show="showOurMission" />
+    <MiddleSection class="middle" v-show="showMiddleSection"/>
+    <PricingPage v-show="showPremium" />
     <SubScribe />
+    
   </div>
 </template>
 
@@ -14,6 +17,8 @@ import NavBar from "./sections/NavBar.vue";
 import Hero from "./sections/Hero.vue";
 import MiddleSection from "./sections/MiddleSection.vue";
 import SubScribe from "./sections/SubScribe.vue";
+import OurMission from "./sections/OurMission.vue";
+import PricingPage from "./sections/PricingPage.vue";
 
 
 export default {
@@ -23,10 +28,83 @@ export default {
     Hero,
     MiddleSection,
     SubScribe,
+    OurMission,
+    PricingPage,
+  },
+  data() {
+    return {
+      showHero: true,
+      showMiddleSection: true,
+      showOurMission: false,
+      showFooter: true,
+      showPremium: false,
+      homePage: true,
+    };
   },
   mounted() {
     document.title = "Socratique";
-  }
+  },
+  methods: {
+    handleMenuHovered(menuItem) {
+      if (menuItem === "our-mission") {
+        console.log("Our Mission button clicked");
+        this.showHero = false;
+        this.showMiddleSection = false;
+        this.showOurMission = true;
+        this.showFooter = false;
+        this.showPremium = false;
+      } else if (menuItem === "premium") {
+        console.log("Premium button clicked in homepage");
+        this.handleMenuPremium(menuItem);
+      } 
+      else if (menuItem === "home") {
+        console.log("Home button clicked in homepage");
+        this.handleMenuHome(menuItem);
+      }
+      else {
+        this.showHero = true;
+        this.showMiddleSection = true;
+        this.showOurMission = false;
+        this.showFooter = true;
+        this.showPremium = false;
+      }
+    },
+    handleMenuPremium(menuItem) {
+      console.log("Menu item hovered: ", menuItem);
+      if (menuItem === "premium") {
+        console.log("Premium button clicked in homepage");
+        this.showHero = false;
+        this.showMiddleSection = false;
+        this.showOurMission = false;
+        this.showFooter = false;
+        this.showPremium = true;
+      } else {
+        this.showHero = false;
+        this.showMiddleSection = true;
+        this.showOurMission = false;
+        this.showFooter = true;
+        this.showPremium = false;
+      }
+    },
+    handleMenuHome(menuItem) {
+      console.log("Menu item hovered: ", menuItem);
+      if (menuItem === "home") {
+        console.log("Home button clicked in homepage");
+        this.showHero = true;
+        this.showMiddleSection = true;
+        this.showOurMission = false;
+        this.showFooter = true;
+        this.showPremium = false;
+      } else {
+        this.showHero = false;
+        this.showMiddleSection = true;
+        this.showOurMission = false;
+        this.showFooter = true;
+        this.showPremium = false;
+      }
+    },
+
+  },
   
 };
 </script>
@@ -49,5 +127,8 @@ export default {
 }
 .homePage{
   overflow-x: hidden;
+}
+.premium{
+  z-index: 3;
 }
 </style>

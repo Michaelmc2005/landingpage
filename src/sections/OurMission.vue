@@ -7,7 +7,7 @@
         <div class="rectangle-6" />
         <div class="rectangle-7" />
         <p class="p">Our Mission, Vision and Values.</p>
-        <img class="rectangle-8" alt="Rectangle" src="https://c.animaapp.com/4ghF38QU/img/rectangle-34.png" />
+        <img class="rectangle-8" alt="Rectangle" src="../assets/rectangle-34_(1)-transformed.png" />
         <div class="rectangle-9" />
       </div>
       <img class="rectangle-10" alt="Rectangle" src="https://c.animaapp.com/4ghF38QU/img/rectangle-33.png" />
@@ -39,7 +39,7 @@
             <br />
             We are a student focused company. <br />
             <br />
-            We are going to constantly iterate and improve. Your feedback matters to us. <br />{" "}
+            We are going to constantly iterate and improve. Your feedback matters to us. <br />
           </span>
         </p>
       </div>
@@ -60,7 +60,7 @@
     height: 3039px;
     overflow: hidden;
     position: relative;
-    width: 1440px;
+    width: 100%;
   }
   
   .our-mission .overlap {
@@ -271,7 +271,7 @@
     border: 2px solid;
     border-radius: 12px;
     height: 486px;
-    left: 472px;
+    left: 661px;
     position: absolute;
     top: 196px;
     width: 907px;
@@ -283,7 +283,7 @@
     border-color: #000000;
     border-radius: 13px;
     height: 473px;
-    left: 462px;
+    left: 654px;
     position: absolute;
     top: 196px;
     width: 899px;
@@ -294,20 +294,22 @@
     font-family: "Montserrat", Helvetica;
     font-size: 128px;
     font-weight: 900;
-    left: 493px;
+    left: 683px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 201px;
+    top: 96px;
     width: 876px;
-  }
+    z-index: 3;
+}
   
   .our-mission .rectangle-8 {
     height: 1266px;
-    left: 0;
+    left: -8%;
+    -o-object-fit: cover;
     object-fit: cover;
     position: absolute;
-    top: 187px;
+    top: 80px;
     width: 1166px;
   }
   
@@ -374,7 +376,7 @@
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 176px;
+    top: 143px;
     width: 1158px;
   }
   

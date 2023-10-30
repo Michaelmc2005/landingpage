@@ -108,7 +108,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .middle-section {
     height: 1536px;
     width: 100%;
