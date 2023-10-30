@@ -421,5 +421,15 @@ transition: transform 0.7s ease;
     font-style: italic;
     font-weight: 900;
 }
+.thank-you-message {
+  position: absolute;
+    top: 771px;
+    left: 50vw;
+    transform: translate(-50%, 0);
+    font-size: 16;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
 }
 </style>
