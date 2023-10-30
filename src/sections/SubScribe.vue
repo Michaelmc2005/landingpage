@@ -86,7 +86,7 @@ export default {
   width: 100%;
   
 }
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .hero {
     position: absolute;
     width: 100%;
@@ -161,7 +161,7 @@ export default {
     font-size: 27px;
     font-weight: 400;
     height: 312px;
-    left: 10vw;
+    left: 0;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
@@ -175,21 +175,6 @@ export default {
     font-size: 17px;
     font-style: italic;
     font-weight: 900;
-}
-.hero .text-wrapper-6[data-v-40b9c9c2] {
-    color: #ffffff;
-    font-family: "Montserrat", Helvetica;
-    font-size: 17px;
-    font-weight: 800;
-    height: 24px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    white-space: nowrap;
-    top: 62%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 }
 .thank-you-message {

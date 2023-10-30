@@ -55,6 +55,7 @@ export default {
     }
     window.addEventListener("resize", this.handleResize);
     console.log("isMobile: ", this.isMobile);
+    
   },
   beforeUnmount() {
    
