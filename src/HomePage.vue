@@ -1,15 +1,18 @@
-
 <template>
   <title>Socratique</title>
-  <div class="homePage" v-show="homePage">
+  <div class="desktop">
     <NavBar class="nav" @menu-hovered="handleMenuHovered"/>
     <Hero  v-show="showHero"/>
     <OurMission v-show="showOurMission" />
     <MiddleSection class="middle" v-show="showMiddleSection"/>
     <PricingPage v-show="showPremium" />
     <SubScribe />
-    
+    <MobileHomeScreen v-show="isMobile" />
   </div>
+  <div class="mobile">
+      <!-- Mobile version of the homepage -->
+      <MobileHomeScreen v-if="isMobile" />
+    </div>
 </template>
 
 <script>
@@ -19,7 +22,7 @@ import MiddleSection from "./sections/MiddleSection.vue";
 import SubScribe from "./sections/SubScribe.vue";
 import OurMission from "./sections/OurMission.vue";
 import PricingPage from "./sections/PricingPage.vue";
-
+import MobileHomeScreen from "./mobileComps/MobileHomeScreen.vue";
 
 export default {
   name: "HomePage",
@@ -30,6 +33,7 @@ export default {
     SubScribe,
     OurMission,
     PricingPage,
+    MobileHomeScreen,
   },
   data() {
     return {
@@ -39,10 +43,22 @@ export default {
       showFooter: true,
       showPremium: false,
       homePage: true,
+      isMobile: false,
     };
   },
   mounted() {
     document.title = "Socratique";
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      this.isMobile = true;
+    } else {
+      this.isMobile = false;
+    }
+    window.addEventListener("resize", this.handleResize);
+    console.log("isMobile: ", this.isMobile);
+  },
+  beforeUnmount() {
+   
+    window.removeEventListener("resize", this.handleResize);
   },
   methods: {
     handleMenuHovered(menuItem) {
@@ -103,6 +119,14 @@ export default {
         this.showPremium = false;
       }
     },
+    handleResize() {
+      if (window.matchMedia("(max-width: 767px)").matches) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+      console.log("isMobile: ", this.isMobile);
+    },
 
   },
   
@@ -130,5 +154,16 @@ export default {
 }
 .premium{
   z-index: 3;
+}
+@media (max-width: 767px) {
+  /* Hide desktop version */
+  .desktop {
+    display: none;
+  }
+
+  /* Show mobile version */
+  .mobile {
+    display: block;
+  }
 }
 </style>
