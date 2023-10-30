@@ -69,6 +69,7 @@
     height: 3052px;
     overflow: hidden;
     width: 100%;
+    overflow-x: hidden;
   }
   
   .mobile-home-screen .overlap-group {
@@ -76,6 +77,7 @@
     left: -13px;
     position: relative;
     width: 1252px;
+    
   }
   .mobile-home-screen .rectangle {
     background-color: #4e3498;
@@ -84,6 +86,7 @@
     position: absolute;
     top: 2372px;
     width: 389px;
+    
   }
   .hamburger{
     position: relative;

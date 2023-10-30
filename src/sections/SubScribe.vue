@@ -86,7 +86,7 @@ export default {
   width: 100%;
   
 }
-@media (max-width: 767px) {
+@media (max-width: 700px) {
   .hero {
     position: absolute;
     width: 100%;

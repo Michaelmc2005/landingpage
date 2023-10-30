@@ -134,6 +134,12 @@ export default {
 </script>
 
 <style>
+.desktop{
+  overflow-x: hidden;
+}
+.mobile{
+  overflow-x: hidden;
+}
 .home {
   background-color: #4d3397;
   border: 1px solid;
@@ -142,6 +148,7 @@ export default {
   overflow: hidden;
   position: relative;
   width: 100%;
+  overflow-x: hidden;
 }
 .nav{
   z-index: 2;
