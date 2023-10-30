@@ -91,7 +91,7 @@
   .hamburger{
     position: relative;
     top: 0;
-    left: 68vw;
+    left: 85vw;
     width: 100px;
     height: 100px;
     cursor: pointer;
