@@ -166,6 +166,7 @@ export default {
   top: 642px;
   width: 175px;
   transition: transform 0.3s ease;
+  z-index: 4;
 }
 
 .hero .start-learning {
@@ -183,6 +184,7 @@ export default {
   opacity: 0;
   transform-origin: center;
   top: 45%;
+  user-select: none;
 }
 
 .hero .smarter {
@@ -312,12 +314,9 @@ export default {
   transform: scale(1.1);
   transition: transform 0.7s ease;
 }
-.hero .start-learning:hover {
-transform: translate(-50%, -50%) scale(1.1);
-transition: transform 0.7s ease;
-}
+
 .hero .text-wrapper-6 {
-      color: #ffffff;
+  color: #ffffff;
   font-family: "Montserrat", Helvetica;
   font-size: 20px;
   font-weight: 800;
@@ -330,6 +329,8 @@ transition: transform 0.7s ease;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 4;
+  user-select: none;
 }
 @media (max-width: 767px) {
   .hero {
