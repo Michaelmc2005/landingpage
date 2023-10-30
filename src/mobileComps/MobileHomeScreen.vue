@@ -25,6 +25,18 @@
             <li><a href="#" @click="handleMenuClicked('our-mission')">Our Mission</a></li>
             <li><a href="#" @click="handleMenuClicked('premium')">Pricing</a></li>
           </ul>
+          <div class="buttons">
+        <div class="overlap" @click="startLearning">
+          <div :class="['rectangle-2', rectangleClassName]" />
+          <div class="rectangle-3" />
+          <div class="text-wrapper-3">Start Learning</div>
+        </div>
+        <div class="overlap-group" @click="signIn">
+          <div :class="['rectangle-4', rectangleClassNameOverride]" />
+          <div class="rectangle-5" />
+          <div class="text-wrapper-4">Sign in</div>
+        </div>
+    </div>
         </div>
       </div>
         <div class="rectangle-12" />
@@ -104,6 +116,9 @@
     width: 100%;
     overflow-x: hidden;
   }
+  .mobile-home-screen {
+    overflow-x: hidden;
+  }
   
   .mobile-home-screen .overlap-group {
     height: 2400px;
@@ -121,6 +136,23 @@
     width: 389px;
     
   }
+  .mobile-home-screen .rectangle-2 {
+  background-color: #000000;
+  border: 1px solid;
+  border-color: #000000;
+  height: 37px;
+  left: 0;
+  position: absolute;
+  top: 39px;
+  width: 171px;
+}
+  .navbar .buttons {
+  height: 110px;
+  right: 2%;
+  position: absolute;
+  top: -5px;
+  width: 353px;
+}
   .hamburger{
     position: relative;
     top: 0;
@@ -135,6 +167,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    /* overflow-x: hidden; */
   }
   .mobile-home-screen .div {
     background-color: #ff2e2e;

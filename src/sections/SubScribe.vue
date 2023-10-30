@@ -65,6 +65,10 @@ export default {
           email: email.value,
         });
         console.log("Document written with ID: ", docRef.id);
+        if (isValidEmail(email.value)) {
+          email.value = "";
+          showThankYouMessage.value = true;
+        }
       } catch (e) {
         console.error("Error adding document: ", e);
       }
@@ -184,7 +188,7 @@ export default {
   opacity: 0;
   transform-origin: center;
   top: 45%;
-  user-select: none;
+  
 }
 
 .hero .smarter {
@@ -427,7 +431,7 @@ export default {
     top: 771px;
     left: 50vw;
     transform: translate(-50%, 0);
-    font-size: 16;
+    font-size: 16px;
     color: white;
     text-align: center;
     font-weight: 600;

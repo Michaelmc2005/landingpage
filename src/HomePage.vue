@@ -135,12 +135,19 @@ export default {
 </script>
 
 <style>
+html{
+  overflow-x: hidden;
+}
+body{
+  overflow-x: hidden;
+}
 .desktop{
   overflow-x: hidden;
 }
 .mobile{
   overflow-x: hidden;
 }
+
 .home {
   background-color: #4d3397;
   border: 1px solid;
@@ -172,6 +179,8 @@ export default {
   /* Show mobile version */
   .mobile {
     display: block;
+    overflow-x: hidden;
+    overflow: scroll;
   }
 }
 </style>
