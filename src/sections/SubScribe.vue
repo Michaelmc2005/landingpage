@@ -80,7 +80,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .hero {
   height: 784px;
   width: 100%;
