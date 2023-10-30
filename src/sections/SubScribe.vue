@@ -80,103 +80,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .hero {
   height: 784px;
   width: 100%;
   
 }
-@media (max-width: 767px) {
-  .hero {
-    position: absolute;
-    width: 100%;
-  }
-  .hero .start-learning-back[data-v-40b9c9c2] {
-    background-color: #1d3557;
-    border: 1px solid;
-    border-color: #000000;
-    border-radius: 18px;
-    height: 54px;
-    left: 36vw;
-    position: absolute;
-    top: 712px;
-    width: 140px;
-    transition: transform 0.3s ease;
-}
-  .hero .text-wrapper[data-v-40b9c9c2] {
-    color: #ffffff;
-    font-family: "Montserrat", Helvetica;
-    font-size: 26px;
-    font-weight: 900;
-    height: 102px;
-    left: 12vw;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 198px;
-    width: 83vw;
-    transform-origin: center;
-    text-align: center;
-  }
-  .hero .rectangle[data-v-40b9c9c2] {
-    background-color: #775fff;
-    border: 2px solid;
-    border-color: #000000;
-    border-radius: 13px;
-    height: 18vw;
-    left: 19vw;
-    position: absolute;
-    top: 280px;
-    width: 67vw;
-  }
-  .hero .text-wrapper-5[data-v-40b9c9c2] {
-    color: #ffffff;
-    font-family: "Montserrat", Helvetica;
-    font-size: 14vw;
-    font-weight: 900;
-    height: 100px;
-    left: 18vw;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 282px;
-    width: 57vw;
-    transform-origin: center;
-    transform: scale(0.85);
 
-}
-.email-input[data-v-40b9c9c2] {
-    position: absolute;
-    top: 648px;
-    left: 4%;
-    height: 40px;
-    width: 76vw;
-    border-radius: 5px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-}
-  .hero .not-harder[data-v-40b9c9c2] {
-    color: #ffffff;
-    font-family: "Montserrat", Helvetica;
-    font-size: 27px;
-    font-weight: 400;
-    height: 312px;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 35%;
-    width: 81vw;
-    text-align: center;
-    transform-origin: center;
-}
-.hero .text-wrapper-3[data-v-40b9c9c2] {
-    text-align: center;
-    font-size: 17px;
-    font-style: italic;
-    font-weight: 900;
-}
-}
 .thank-you-message {
   position: absolute;
   top: 715px;
@@ -420,5 +330,96 @@ transition: transform 0.7s ease;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 767px) {
+  .hero {
+    position: absolute;
+    width: 100%;
+  }
+  .hero .start-learning-back {
+    background-color: #1d3557;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 18px;
+    height: 54px;
+    left: 36vw;
+    position: absolute;
+    top: 712px;
+    width: 140px;
+    transition: transform 0.3s ease;
+}
+  .hero .text-wrapper {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 26px;
+    font-weight: 900;
+    height: 102px;
+    left: 12vw;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 198px;
+    width: 83vw;
+    transform-origin: center;
+    text-align: center;
+  }
+  .hero .rectangle{
+    background-color: #775fff;
+    border: 2px solid;
+    border-color: #000000;
+    border-radius: 13px;
+    height: 18vw;
+    left: 19vw;
+    position: absolute;
+    top: 280px;
+    width: 67vw;
+  }
+  .hero .text-wrapper-5 {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 14vw;
+    font-weight: 900;
+    height: 100px;
+    left: 18vw;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 282px;
+    width: 57vw;
+    transform-origin: center;
+    transform: scale(0.85);
+
+}
+.email-input {
+    position: absolute;
+    top: 648px;
+    left: 4%;
+    height: 40px;
+    width: 76vw;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+}
+  .hero .not-harder {
+    color: #ffffff;
+    font-family: "Montserrat", Helvetica;
+    font-size: 27px;
+    font-weight: 400;
+    height: 312px;
+    left: 11vw;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 35%;
+    width: 81vw;
+    text-align: center;
+    transform-origin: center;
+}
+.hero .text-wrapper-3 {
+    text-align: center;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 900;
+}
 }
 </style>
