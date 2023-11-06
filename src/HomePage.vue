@@ -12,6 +12,7 @@
   <div class="mobile">
       <!-- Mobile version of the homepage -->
       <MobileHomeScreen v-if="isMobile" />
+      <MobileOurMission v-if="isMobile" />
     </div>
 </template>
 
@@ -23,6 +24,7 @@ import SubScribe from "./sections/SubScribe.vue";
 import OurMission from "./sections/OurMission.vue";
 import PricingPage from "./sections/PricingPage.vue";
 import MobileHomeScreen from "./mobileComps/MobileHomeScreen.vue";
+import MobileOurMission from "./mobileComps/MobileOurMission.vue";
 
 export default {
   name: "HomePage",
@@ -34,6 +36,7 @@ export default {
     OurMission,
     PricingPage,
     MobileHomeScreen,
+    MobileOurMission,
   },
   data() {
     return {
@@ -44,6 +47,7 @@ export default {
       showPremium: false,
       homePage: true,
       isMobile: false,
+      
     };
   },
   mounted() {

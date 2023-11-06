@@ -7,7 +7,7 @@
         <div class="rectangle-6" />
         <div class="rectangle-7" />
         <p class="p">Our Mission, Vision and Values.</p>
-        <img class="rectangle-8" alt="Rectangle" src="../assets/rectangle-34_(1)-transformed.png" />
+        <img class="rectangle-8" alt="Rectangle" src="https://c.animaapp.com/zbKEbAD9/img/rectangle-34.png" />
         <div class="rectangle-9" />
       </div>
       <img class="rectangle-10" alt="Rectangle" src="https://c.animaapp.com/4ghF38QU/img/rectangle-33.png" />
@@ -305,7 +305,7 @@
   
   .our-mission .rectangle-8 {
     height: 1266px;
-    left: -8%;
+    left: 0%;
     -o-object-fit: cover;
     object-fit: cover;
     position: absolute;

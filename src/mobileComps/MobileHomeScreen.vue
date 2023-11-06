@@ -1,5 +1,5 @@
 <template>
-    <div class="mobile-home-screen">
+    <div class="mobile-home-screen" v-if="showHomeScreen">
       <div class="overlap-group">
         <img class="img" alt="Rectangle" src="https://c.animaapp.com/yV9C6fSs/img/rectangle-51.png" />
         <div class="rectangle-5" />
@@ -21,10 +21,17 @@
         </div>
         <div class="sidebar-content">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#" @click="handleMenuClicked('our-mission')">Our Mission</a></li>
-            <li><a href="#" @click="handleMenuClicked('premium')">Pricing</a></li>
+            <li>
+              <router-link to="/" @click.prevent="handleMenuClicked('home')">Home</router-link>
+            </li>
+            <li>
+              <router-link to="/our-mission" @click.prevent="handleMenuClicked('our-mission')">Our Mission</router-link>
+            </li>
+            <li>
+              <router-link to="/pricing" @click.prevent="handleMenuClicked('pricing')">Pricing</router-link>
+            </li>
           </ul>
+
           <div class="buttons">
         <div class="overlap" @click="startLearning">
           <div :class="['rectangle-2', rectangleClassName]" />
@@ -70,7 +77,9 @@
         <img class="rectangle-20" alt="Rectangle" src="https://c.animaapp.com/yV9C6fSs/img/rectangle-26.svg" />
         <div class="text-wrapper-18">Send</div>
       </div>
+      <router-view></router-view>
       <SubScribe />
+
     </div>
   </template>
   
@@ -79,6 +88,7 @@
   import  ANewWayToLearn from "./ANewWayToLearn.vue";
   import NotHarder from "./NotHarder.vue";
   import SubScribe from "../sections/SubScribe.vue";
+ 
   
   export default {
     name: "MobileHomeScreen",
@@ -92,8 +102,10 @@
     return {
       isMobile: false,
       isSidebarOpen: false,
+      showHomeScreen: true,
     };
     },
+    
     methods: {
         openSidebar() {
         this.isSidebarOpen = true;
@@ -101,9 +113,10 @@
         closeSidebar() {
         this.isSidebarOpen = false;
         },
-        handleMenuClicked(menuItem) {
-        this.closeSidebar();
-        this.$emit("menu-clicked", menuItem);
+        handleMenuClicked(routeName) {
+          this.$router.push({ name: routeName });
+          this.closeSidebar();
+          this.showHomeScreen = false
         },
     }
   };
