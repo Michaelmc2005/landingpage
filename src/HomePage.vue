@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import { inject } from '@vercel/analytics';
 import NavBar from "./sections/NavBar.vue";
 import Hero from "./sections/Hero.vue";
 import MiddleSection from "./sections/MiddleSection.vue";
@@ -25,7 +26,7 @@ import OurMission from "./sections/OurMission.vue";
 import PricingPage from "./sections/PricingPage.vue";
 import MobileHomeScreen from "./mobileComps/MobileHomeScreen.vue";
 import MobileOurMission from "./mobileComps/MobileOurMission.vue";
-
+inject();
 export default {
   name: "HomePage",
   components: {
