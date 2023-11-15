@@ -63,7 +63,7 @@
                 </div>
               </div>
               <div class="text-wrapper-7">Per month</div>
-              <div class="text-wrapper-8">£6.99</div>
+              <div class="text-wrapper-8">£4.99</div>
               <p class="unlimted-dialouge-no">
                 Unlimited dialouge
                 <br />
