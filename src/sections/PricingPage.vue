@@ -39,7 +39,7 @@
                 <br />
                 No document functionality
               </p>
-              <div class="get-started">
+              <div class="get-started" @click="signIn">
                 <div class="div-wrapper">
                   <div class="text-wrapper-3">Get Started</div>
                 </div>
@@ -58,21 +58,21 @@
           <div class="overlap-4">
             <div class="overlap-5">
               <div class="star-your-free-trial">
-                <div class="overlap-group-2">
-                  <div class="text-wrapper-6">Start Your Free Trial</div>
+                <div class="overlap-group-2" @click="stripe">
+                  <div class="text-wrapper-6" >Get Premium</div>
                 </div>
               </div>
               <div class="text-wrapper-7">Per month</div>
               <div class="text-wrapper-8">£6.99</div>
               <p class="unlimted-dialouge-no">
-                Unlimted dialouge
+                Unlimited dialouge
                 <br />
                 No Advertising
                 <br />
                 Learn from your documents
                 <br />
                 Access to community of socratique students.
-                <br />2 week free trial.
+                <br />
               </p>
             </div>
             <p class="text-wrapper-9">
@@ -86,8 +86,26 @@
   </template>
   
   <script>
+  import { signInWithGoogle } from "@/firebase"; 
   export default {
     name: "PricingPage",
+    methods: {
+    async signIn() {
+      try {
+        const user = await signInWithGoogle();
+        if (user) {
+          console.log("User signed in: ", user);
+          window.location.href = 'https://socraticdialogue.vercel.app/';
+
+        }
+      } catch (error) {
+        console.error("Failed to sign in: ", error);
+      }
+    },
+    stripe(){
+      window.location.href = 'https://checkout.stripe.com/c/pay/cs_live_a1ecTkrIGSW1POpQoriv0EVgIjXZ78SiSshkwJM4oM3iTHHaWwWQgrzM0d#fidkdWxOYHwnPyd1blppbHNgWjA0SkY0c1dJUz1TPWZObF9ANjVvbkNQck9mYEtIQndrb3dQRGdIRkxudEhPSVBsTWhpfzdRUmd2UWJHNnBHa0J%2FVlBQamlqNX81Y1xfMERqUG5NM1Y9SzVSNTVsakliYzZ%2FdicpJ3VpbGtuQH11anZgYUxhJz8nYVczN2ZhPHQ9Z2QzN241NTU1J3gl';
+    }
+  }
   };
   </script>
   
@@ -500,7 +518,7 @@
     font-family: "Montserrat", Helvetica;
     font-size: 26px;
     font-weight: 300;
-    height: 310px;
+    height: 200px;
     left: 0;
     letter-spacing: 0;
     line-height: normal;

@@ -24,7 +24,7 @@
 </template>
 
 
-  <script>
+<script>
 import { signInWithGoogle } from "@/firebase";  // Update the import path as needed
 
 export default {

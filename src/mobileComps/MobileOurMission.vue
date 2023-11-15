@@ -48,12 +48,23 @@
   <script>
   export default {
     name: "MobileOurMission",
+    methods: {
+      // eslint-disable-next-line no-unused-vars
+      async getPosts() {
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+        const data = await response.json();
+        console.log(data);
+        
+      },
+      
+    },
   };
+  
   </script>
   
   <style>
   .mobile-our-mission {
-    height: 3052px;
+    height: 2000px;
     overflow: hidden;
     width: 390px;
   }
